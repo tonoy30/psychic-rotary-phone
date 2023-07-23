@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "algomonster"
+version = "0.1.0"
+description = ""
+authors = ["Tonoy Akanda <tonoy.sust@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.0.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
