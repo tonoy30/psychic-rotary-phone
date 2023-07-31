@@ -2,6 +2,7 @@ from algomonster.binarysearch.binarysearch import binary_search
 from algomonster.binarysearch.findboundary import find_boundary
 from algomonster.binarysearch.findfirstoccurrence import find_first_occurrence
 from algomonster.binarysearch.firstnotsmaller import first_not_smaller
+from algomonster.binarysearch.squareroot import square_root
 
 
 def test_binary_search():
@@ -429,3 +430,13 @@ def test_find_first_occurrence():
         print("running -> ", test_case["name"])
         assert find_first_occurrence(
             test_case["input"]["arr"], test_case["input"]["target"]) == test_case["expected"]
+
+
+def test_square_root():
+    test_cases = [
+        {"input": 4, "expected": 2},
+        {"input": 8, "expected": 2},
+        {"input": 9, "expected": 3}
+    ]
+    for test_case in test_cases:
+        assert square_root(test_case["input"]) == test_case["expected"]
