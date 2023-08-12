@@ -1,6 +1,7 @@
 from algomonster.binarysearch.binarysearch import binary_search
 from algomonster.binarysearch.findboundary import find_boundary
 from algomonster.binarysearch.findfirstoccurrence import find_first_occurrence
+from algomonster.binarysearch.findminrotated import find_min_rotated
 from algomonster.binarysearch.firstnotsmaller import first_not_smaller
 from algomonster.binarysearch.squareroot import square_root
 
@@ -440,3 +441,12 @@ def test_square_root():
     ]
     for test_case in test_cases:
         assert square_root(test_case["input"]) == test_case["expected"]
+
+
+def test_find_min_rotated():
+    test_cases = [
+        {"input": [30, 40, 50, 10, 20], "expected": 3},
+        {"input": [3, 5, 7, 11, 13, 17, 19, 2], "expected": 7},
+    ]
+    for tc in test_cases:
+        assert find_min_rotated(tc['input']) == tc['expected']
